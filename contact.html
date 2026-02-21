@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Kizazi Technologies</title>
+    <meta name="description" content="Get in touch with Kizazi Technologies. Located in Blantyre, Malawi. We'd love to hear about your project.">
+    <meta name="author" content="Kizazi Technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Kizazi Technologies</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="business.html">Our Business</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="news.html">News & Press</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header header-contact">
+        <div class="container">
+            <h1 class="animate">Contact Us</h1>
+            <p class="animate animate-delay-1">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Info + Form -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Contact Information -->
+                <div class="contact-details animate">
+                    <h2>Get In Touch</h2>
+                    <p>Have a project in mind or just want to say hello? Fill in the form or reach us directly using the details below.</p>
+                    <div class="contact-info-grid">
+                        <div class="info-card animate animate-delay-1">
+                            <h3>📞 Phone</h3>
+                            <p>+265 993 909 120</p>
+                        </div>
+                        <div class="info-card animate animate-delay-2">
+                            <h3>✉️ Email</h3>
+                            <p>info@kizazi.com</p>
+                        </div>
+                        <div class="info-card animate animate-delay-3">
+                            <h3>📍 Address</h3>
+                            <p>M3 Midima Road, Blantyre, Malawi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap animate animate-delay-2">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" action="https://formspree.io/f/mjgeaykp" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Kizazi Technologies</div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <script>
+        // Hamburger Menu
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.querySelector('.hamburger');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

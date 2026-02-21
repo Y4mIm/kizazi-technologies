@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Press — Kizazi Technologies</title>
+    <meta name="description" content="Latest news, announcements and press releases from Kizazi Technologies. Stay updated on our growth and innovations.">
+    <meta name="author" content="Kizazi Technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Kizazi Technologies</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="business.html">Our Business</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="news.html" class="active">News & Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header header-news">
+        <div class="container">
+            <h1 class="animate">News & Press</h1>
+            <p class="animate animate-delay-1">Latest updates and announcements from Kizazi Technologies</p>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="news">
+        <div class="container">
+            <h2 class="animate">Latest News</h2>
+            <div class="news-grid">
+                <div class="news-card animate animate-delay-1">
+                    <div class="news-date">January 2026</div>
+                    <div class="news-tag">Company News</div>
+                    <h3>Kizazi Technologies Launches New Cloud Division</h3>
+                    <p>We are excited to announce the launch of our dedicated cloud services division, offering enterprise-grade infrastructure solutions to businesses across Africa.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="news-card animate animate-delay-2">
+                    <div class="news-date">December 2025</div>
+                    <div class="news-tag">Partnership</div>
+                    <h3>Strategic Partnership With Pan-African Tech Hub</h3>
+                    <p>Kizazi Technologies has entered into a strategic partnership to accelerate digital transformation across East and Southern Africa.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="news-card animate animate-delay-3">
+                    <div class="news-date">November 2025</div>
+                    <div class="news-tag">Award</div>
+                    <h3>Kizazi Technologies Named Top Tech Company in Malawi</h3>
+                    <p>We are honored to have been recognized as one of the leading technology companies driving innovation in Malawi.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="news-card animate animate-delay-1">
+                    <div class="news-date">October 2025</div>
+                    <div class="news-tag">Product Launch</div>
+                    <h3>Introducing Our New Data Analytics Platform</h3>
+                    <p>Our latest product launch brings powerful data analytics tools to small and medium businesses at an affordable price point.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="news-card animate animate-delay-2">
+                    <div class="news-date">September 2025</div>
+                    <div class="news-tag">Community</div>
+                    <h3>Kizazi Coding Bootcamp Graduates First Class</h3>
+                    <p>Our inaugural coding bootcamp successfully trained 40 young developers from across Malawi, equipping them with industry-ready skills.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="news-card animate animate-delay-3">
+                    <div class="news-date">August 2025</div>
+                    <div class="news-tag">Events</div>
+                    <h3>Kizazi at Africa Tech Summit 2025</h3>
+                    <p>Our team attended and presented at the Africa Tech Summit, showcasing our innovative solutions to an audience of over 5,000 tech leaders.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Enquiries -->
+    <section class="press-enquiries">
+        <div class="container">
+            <h2 class="animate">Press Enquiries</h2>
+            <p class="animate animate-delay-1">For media enquiries, interviews, or press materials please contact our communications team directly.</p>
+            <a href="contact.html" class="cta-button animate animate-delay-2">Contact Our Press Team</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Kizazi Technologies</div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <script>
+        // Hamburger Menu
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.querySelector('.hamburger');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

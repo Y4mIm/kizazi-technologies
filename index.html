@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kizazi Technologies — Digital Solutions for Africa</title>
+    <meta name="description" content="Kizazi Technologies delivers cutting-edge web, mobile and cloud solutions for businesses across Africa. Based in Blantyre, Malawi.">
+    <meta name="keywords" content="web development Malawi, mobile apps Africa, cloud solutions, tech company Blantyre">
+    <meta name="author" content="Kizazi Technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Kizazi Technologies</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="business.html">Our Business</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="news.html">News & Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="slideshow">
+            <div class="slide active" style="background-image: url('images/hero-1.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero-2.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero-3.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero-4.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Welcome to Kizazi Technologies</h1>
+            <p>Innovative Solutions for Your Digital Future</p>
+            <a href="business.html" class="cta-button">Explore Services</a>
+        </div>
+        <div class="slide-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="animate">About Kizazi Technologies</h2>
+            <p class="animate animate-delay-1">We are a leading technology company committed to delivering cutting-edge solutions that drive digital transformation. Our team of experts brings years of experience across various industries, empowering businesses to achieve their goals through innovative technology.</p>
+            <a href="about.html" class="cta-button animate animate-delay-2">Meet Our Team</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="animate">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate animate-delay-1">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Kizazi Technologies delivered exceptional results. Their team was professional and responsive throughout the project."</p>
+                    <p class="client-name">— Alex Mwangi, Tech Startup CEO</p>
+                </div>
+                <div class="testimonial-card animate animate-delay-2">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Outstanding service! They transformed our business with innovative solutions and excellent support."</p>
+                    <p class="client-name">— Grace Kipchoge, Business Owner</p>
+                </div>
+                <div class="testimonial-card animate animate-delay-3">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Highly recommend Kizazi Technologies. They understand your business needs and deliver quality solutions."</p>
+                    <p class="client-name">— David Okonkwo, Enterprise Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Ready to Transform Your Business?</h2>
+            <p class="animate animate-delay-1">Let's work together to bring your ideas to life</p>
+            <a href="contact.html" class="cta-button-large animate animate-delay-2">Start Your Project Today</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Kizazi Technologies</div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        // Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = n;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Hamburger Menu
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.querySelector('.hamburger');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

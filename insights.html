@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights — Kizazi Technologies</title>
+    <meta name="description" content="Explore Kizazi Technologies portfolio of projects, case studies and articles on technology and innovation in Africa.">
+    <meta name="author" content="Kizazi Technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Kizazi Technologies</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="business.html">Our Business</a></li>
+                <li><a href="insights.html" class="active">Insights</a></li>
+                <li><a href="news.html">News & Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header header-insights">
+        <div class="container">
+            <h1 class="animate">Insights</h1>
+            <p class="animate animate-delay-1">Our work, projects and case studies</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="animate">Recent Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate animate-delay-1">
+                    <img src="images/project-1.jpg" alt="E-Commerce Platform">
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Built a scalable e-commerce solution for a major retailer.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate animate-delay-2">
+                    <img src="images/project-2.jpg" alt="Mobile Banking App">
+                    <div class="portfolio-info">
+                        <h3>Mobile Banking App</h3>
+                        <p>Developed a secure mobile banking application.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate animate-delay-3">
+                    <img src="images/project-3.jpg" alt="Analytics Dashboard">
+                    <div class="portfolio-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Created a real-time data analytics platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Articles Section -->
+    <section class="insights-articles">
+        <div class="container">
+            <h2 class="animate">Articles & Thinking</h2>
+            <div class="articles-grid">
+                <div class="article-card animate animate-delay-1">
+                    <div class="article-tag">Technology</div>
+                    <h3>The Future of Cloud Computing in Africa</h3>
+                    <p>How cloud technology is reshaping business across the continent and what it means for the next generation of companies.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="article-card animate animate-delay-2">
+                    <div class="article-tag">Innovation</div>
+                    <h3>Building Mobile-First Products for Emerging Markets</h3>
+                    <p>Why mobile-first design is not just a trend but a necessity for businesses targeting African consumers.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                <div class="article-card animate animate-delay-3">
+                    <div class="article-tag">Data</div>
+                    <h3>Turning Raw Data Into Business Decisions</h3>
+                    <p>A practical guide to how small and medium businesses can leverage data analytics without a huge budget.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Have a Project in Mind?</h2>
+            <p class="animate animate-delay-1">Let's build something great together</p>
+            <a href="contact.html" class="cta-button-large animate animate-delay-2">Start a Conversation</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Kizazi Technologies</div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        // Hamburger Menu
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.querySelector('.hamburger');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

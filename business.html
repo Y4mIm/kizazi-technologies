@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Business — Kizazi Technologies</title>
+    <meta name="description" content="Explore Kizazi Technologies services including web development, mobile apps, cloud solutions and data analytics for businesses across Africa.">
+    <meta name="author" content="Kizazi Technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Kizazi Technologies</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="business.html" class="active">Our Business</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="news.html">News & Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header header-business">
+        <div class="container">
+            <h1 class="animate">Our Business</h1>
+            <p class="animate animate-delay-1">What we do and how we do it</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="animate">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate animate-delay-1">
+                    <h3>Web Development</h3>
+                    <p>Custom web applications and responsive websites tailored to your needs.</p>
+                </div>
+                <div class="service-card animate animate-delay-2">
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android.</p>
+                </div>
+                <div class="service-card animate animate-delay-3">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and deployment services.</p>
+                </div>
+                <div class="service-card animate animate-delay-4">
+                    <h3>Data Analytics</h3>
+                    <p>Transform your data into actionable insights with advanced analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="animate">Why Choose Kizazi Technologies</h2>
+            <div class="features-grid">
+                <div class="feature-item animate animate-delay-1">
+                    <div class="feature-number">01</div>
+                    <h3>Expert Team</h3>
+                    <p>Highly skilled professionals with years of industry experience.</p>
+                </div>
+                <div class="feature-item animate animate-delay-2">
+                    <div class="feature-number">02</div>
+                    <h3>Proven Track Record</h3>
+                    <p>Successfully delivered projects for Fortune 500 companies.</p>
+                </div>
+                <div class="feature-item animate animate-delay-3">
+                    <div class="feature-number">03</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and maintenance services.</p>
+                </div>
+                <div class="feature-item animate animate-delay-4">
+                    <div class="feature-number">04</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates without compromising on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Ready to Transform Your Business?</h2>
+            <p class="animate animate-delay-1">Let's work together to bring your ideas to life</p>
+            <a href="contact.html" class="cta-button-large animate animate-delay-2">Start Your Project Today</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Kizazi Technologies</div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        // Hamburger Menu
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.querySelector('.hamburger');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

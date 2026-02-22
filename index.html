@@ -15,7 +15,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Kizazi Technologies</div>
+            <a href="index.html" class="logo">
+                <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+            </a>
             <button class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -38,20 +40,19 @@
             <div class="slide active" style="background-image: url('images/hero-1.jpg')"></div>
             <div class="slide" style="background-image: url('images/hero-2.jpg')"></div>
             <div class="slide" style="background-image: url('images/hero-3.jpg')"></div>
-            <div class="slide" style="background-image: url('images/hero-4.jpg')"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>Welcome to Kizazi Technologies</h1>
-            <p>Innovative Solutions for Your Digital Future</p>
-            <a href="business.html" class="cta-button">Explore Services</a>
+            <h1 id="slide-title">The Quality of a Business<br>Mirrors the Quality of Its Systems</h1>
+            <p id="slide-subtitle">Technology shapes performance.</p>
+            <a href="business.html" class="cta-button" id="slide-btn">Explore Services</a>
         </div>
         <div class="slide-dots">
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
         </div>
+        <div class="hero-spinner" id="heroSpinner"></div>
     </section>
 
     <!-- About Section -->
@@ -87,38 +88,172 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Stats + Profile + Clients Section -->
+    <section class="impact-section">
         <div class="container">
-            <h2 class="animate">Ready to Transform Your Business?</h2>
-            <p class="animate animate-delay-1">Let's work together to bring your ideas to life</p>
-            <a href="contact.html" class="cta-button-large animate animate-delay-2">Start Your Project Today</a>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-item animate animate-delay-1">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item animate animate-delay-2">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item animate animate-delay-3">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item animate animate-delay-4">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+
+            <!-- Company Profile -->
+            <div class="profile-strip animate">
+                <div class="profile-text">
+                    <span class="profile-label">Company Profile</span>
+                    <p>Download our full company profile to learn more about Kizazi Technologies — our services, case studies and approach.</p>
+                </div>
+                <a href="kizazi-profile.pdf" download class="profile-download">
+                    <i class="fas fa-download"></i> Download Profile
+                </a>
+            </div>
+
+            <!-- Client Logos -->
+            <div class="clients-section">
+                <p class="clients-label animate">Trusted By</p>
+                <div class="clients-grid animate animate-delay-1">
+                    <div class="client-logo">
+                        <img src="images/logo-maiic.png" alt="MAIIC">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-agriculture.jpg" alt="Ministry of Agriculture">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-bethechange.png" alt="Be the Change">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-sadc.png" alt="SADC">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-unima.png" alt="University of Malawi">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-realist.png" alt="Realist">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/logo-lyno.jpg" alt="Lyno">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-logo">Kizazi Technologies</div>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-top">
+
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+                    </div>
+                    <div class="footer-contact-info">
+                         <p>   Blantyre, Malawi</p>
+                        <p>  info@kizazi.com</p>
+                        <p>+265 993 909 120</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-heading">Services</div>
+                    <ul class="footer-links">
+                        <li><a href="business.html">Web Development</a></li>
+                        <li><a href="business.html">Mobile Apps</a></li>
+                        <li><a href="business.html">Cloud Solutions</a></li>
+                        <li><a href="business.html">Data Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-heading">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="insights.html">Projects</a></li>
+                        <li><a href="business.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-heading">Resources</div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Join Our Team</a></li>
+                        <li><a href="insights.html">Partners & Clients</a></li>
+                    </ul>
+                </div>
+
             </div>
-            <p>&copy; 2026 Kizazi Technologies. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kizazi Technologies</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <a href="https://wa.me/265889445889" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
-        // Slideshow
+        // Hero Spinner
+        window.addEventListener('load', () => {
+            document.getElementById('heroSpinner').classList.add('hidden');
+        });
+
+        // Slideshow with dynamic text
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
+
+        const slideContent = [
+            {
+                title: "The Quality of a Business<br>Mirrors the Quality of Its Systems",
+                subtitle: "Technology shapes performance.",
+                btn: "Explore Services",
+                link: "business.html",
+                btnDark: false
+            },
+            {
+                title: "Growth Is Easier When<br>Systems Are Intentional",
+                subtitle: "We build technology that works quietly and delivers loudly.",
+                btn: "See Our Work",
+                link: "insights.html",
+                btnDark: false
+            },
+            {
+                title: "Good Systems Do Not<br>Announce Themselves — They Perform",
+                subtitle: "Every Scalable Business Is Built on Invisible Systems.",
+                btn: "Get In Touch",
+                link: "contact.html",
+                btnDark: true
+            }
+        ];
 
         function goToSlide(n) {
             slides[currentSlide].classList.remove('active');
@@ -126,6 +261,21 @@
             currentSlide = n;
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
+
+            const content = slideContent[currentSlide];
+            document.getElementById('slide-title').innerHTML = content.title;
+            document.getElementById('slide-subtitle').textContent = content.subtitle;
+            const btn = document.getElementById('slide-btn');
+            btn.textContent = content.btn;
+            btn.href = content.link;
+
+            if (content.btnDark) {
+                btn.style.background = 'var(--color-accent)';
+                btn.style.color = 'var(--color-light)';
+            } else {
+                btn.style.background = 'var(--color-light)';
+                btn.style.color = 'var(--color-dark)';
+            }
         }
 
         function nextSlide() {
@@ -133,7 +283,7 @@
             goToSlide(next);
         }
 
-        setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 7000);
 
         // Hamburger Menu
         function toggleMenu() {

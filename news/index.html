@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Kizazi Technologies</title>
-    <meta name="description" content="Get in touch with Kizazi Technologies. We are based in Blantyre, Malawi and available for projects across Africa.">
+    <title>News & Press — Kizazi Technologies</title>
+    <meta name="description" content="Latest news, press releases and updates from Kizazi Technologies.">
     <meta name="author" content="Kizazi Technologies">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
         @media (max-width: 768px) {
@@ -20,67 +20,65 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+            <a href="/" class="logo">
+                <img src="../images/kizazi-logo.svg" alt="Kizazi Technologies">
             </a>
             <button class="hamburger" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="business.html">Our Business</a></li>
-                <li><a href="educore.html">EduCore MIS</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="news.html">News & Press</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/business">Our Business</a></li>
+                <li><a href="/educore">EduCore MIS</a></li>
+                <li><a href="/insights">Insights</a></li>
+                <li><a href="/news" class="active">News & Press</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="page-header header-contact">
+    <section class="page-header header-news">
         <div class="container">
-            <h1 class="animate">Contact Us</h1>
-            <p class="animate animate-delay-1">Let's talk about what you need</p>
+            <h1 class="animate">News & Press</h1>
+            <p class="animate animate-delay-1">Updates, announcements and press from Kizazi Technologies</p>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="news">
         <div class="container">
-            <div class="contact-layout">
-                <div class="contact-details">
-                    <h2 class="animate">Get in Touch</h2>
-                    <p class="animate animate-delay-1">Whether you have a project in mind, a question about EduCore MIS, or just want to understand how we can help — we are happy to talk.</p>
-                    <div class="contact-info-grid animate animate-delay-2">
-                        <div class="info-card">
-                            <h3>Location</h3>
-                            <p>Blantyre, Malawi</p>
-                        </div>
-                        <div class="info-card">
-                            <h3>Email</h3>
-                            <p>info@kizazitechnologies.com</p>
-                        </div>
-                        <div class="info-card">
-                            <h3>Phone & WhatsApp</h3>
-                            <p>+265 993 909 120</p>
-                        </div>
-                        <div class="info-card">
-                            <h3>EduCore MIS</h3>
-                            <p>Talk to us on WhatsApp for school system enquiries</p>
-                        </div>
-                    </div>
+            <h2 class="animate">Latest News</h2>
+            <div class="news-grid">
+                <div class="news-card animate animate-delay-1">
+                    <div class="news-date">April 2026</div>
+                    <div class="news-tag">Product Launch</div>
+                    <h3>Kizazi Technologies Launches EduCore MIS</h3>
+                    <p>We are proud to announce the launch of EduCore MIS — a school management system built specifically for private and mission schools across Malawi.</p>
+                    <a href="/educore" class="read-more">Learn More →</a>
                 </div>
-                <div class="contact-form-wrap animate animate-delay-1">
-                    <h2>Send a Message</h2>
-                    <form class="contact-form" action="#" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                <div class="news-card animate animate-delay-2">
+                    <div class="news-date">March 2026</div>
+                    <div class="news-tag">Company</div>
+                    <h3>Kizazi Technologies Expands Its Service Offering</h3>
+                    <p>Building on years of delivering web and mobile solutions, Kizazi Technologies is expanding into enterprise software and institutional management systems.</p>
+                    <a href="/about" class="read-more">About Us →</a>
+                </div>
+                <div class="news-card animate animate-delay-3">
+                    <div class="news-date">January 2026</div>
+                    <div class="news-tag">Partnership</div>
+                    <h3>New Partnerships Across Malawi</h3>
+                    <p>Kizazi Technologies continues to grow its network of clients and partners across Malawi, delivering digital solutions to businesses and institutions.</p>
+                    <a href="/contact" class="read-more">Get in Touch →</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="press-enquiries">
+        <div class="container">
+            <h2>Press Enquiries</h2>
+            <p>For media enquiries, interviews or press information, please get in touch with our team directly.</p>
+            <a href="/contact" class="cta-button">Contact Us</a>
         </div>
     </section>
 
@@ -89,7 +87,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+                        <img src="../images/kizazi-logo.svg" alt="Kizazi Technologies">
                     </div>
                     <div class="footer-contact-info">
                         <p>Blantyre, Malawi</p>
@@ -105,36 +103,36 @@
                 <div class="footer-col">
                     <div class="footer-heading">Services</div>
                     <ul class="footer-links">
-                        <li><a href="business.html">Web Development</a></li>
-                        <li><a href="business.html">Mobile Apps</a></li>
-                        <li><a href="business.html">Cloud Solutions</a></li>
-                        <li><a href="business.html">Data Analytics</a></li>
+                        <li><a href="/business">Web Development</a></li>
+                        <li><a href="/business">Mobile Apps</a></li>
+                        <li><a href="/business">Cloud Solutions</a></li>
+                        <li><a href="/business">Data Analytics</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <div class="footer-heading">Company</div>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="insights.html">Projects</a></li>
-                        <li><a href="business.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/insights">Projects</a></li>
+                        <li><a href="/business">Products</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <div class="footer-heading">EduCore MIS</div>
                     <ul class="footer-links">
-                        <li><a href="educore.html">About EduCore</a></li>
+                        <li><a href="/educore">About EduCore</a></li>
                         <li><a href="https://educore-mis-9fcq.vercel.app/login" target="_blank">School Login</a></li>
-                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="/contact">Support</a></li>
                         <li><a href="https://wa.me/265889445889" target="_blank">Talk to Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <div class="footer-heading">Resources</div>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="contact.html">Join Our Team</a></li>
-                        <li><a href="insights.html">Partners & Clients</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact">Join Our Team</a></li>
+                        <li><a href="/insights">Partners & Clients</a></li>
                     </ul>
                 </div>
             </div>

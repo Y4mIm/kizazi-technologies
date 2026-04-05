@@ -3,329 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kizazi Technologies — Digital Solutions for Africa</title>
-    <meta name="description" content="Kizazi Technologies delivers cutting-edge web, mobile and cloud solutions for businesses across Africa. Based in Blantyre, Malawi.">
-    <meta name="keywords" content="web development Malawi, mobile apps Africa, cloud solutions, tech company Blantyre">
+    <title>Contact — Kizazi Technologies</title>
+    <meta name="description" content="Get in touch with Kizazi Technologies. We are based in Blantyre, Malawi and available for projects across Africa.">
     <meta name="author" content="Kizazi Technologies">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <style>
-
-        /* ===== EDUCORE TEASER ===== */
-        .educore-teaser {
-            padding: 80px 0;
-            background: var(--color-light);
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .educore-teaser-inner {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 48px;
-        }
-
-        .educore-teaser-left {
-            max-width: 620px;
-        }
-
-        .educore-teaser-label {
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            display: block;
-            margin-bottom: 24px;
-        }
-
-        .educore-teaser-question {
-            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-            font-weight: 900;
-            color: var(--color-text);
-            letter-spacing: -0.03em;
-            line-height: 1.18;
-            margin-bottom: 0;
-        }
-
-        .educore-teaser-question em {
-            font-style: normal;
-            color: var(--color-accent);
-        }
-
-        .educore-teaser-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 20px;
-            flex-shrink: 0;
-        }
-
-        .educore-teaser-sub {
-            font-size: 0.88rem;
-            color: var(--color-muted);
-            line-height: 1.7;
-            text-align: right;
-            max-width: 260px;
-        }
-
-        .educore-teaser-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.88rem;
-            letter-spacing: 0.02em;
-            border-bottom: 2px solid var(--color-accent);
-            padding-bottom: 4px;
-            transition: var(--transition);
-        }
-
-        .educore-teaser-link:hover {
-            color: var(--color-accent);
-            gap: 14px;
-        }
-
-        .educore-teaser-link i {
-            font-size: 0.75rem;
-            transition: transform 0.2s;
-        }
-
-        .educore-teaser-link:hover i {
-            transform: translateX(4px);
-        }
-
-        /* Footer 5-column */
-        .footer-top {
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-        }
-
+        .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
         @media (max-width: 768px) {
-            .educore-teaser-inner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 32px;
-            }
-
-            .educore-teaser-right {
-                align-items: flex-start;
-            }
-
-            .educore-teaser-sub {
-                text-align: left;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column: 1 / -1;
-            }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">
                 <img src="../images/kizazi-logo.svg" alt="Kizazi Technologies">
             </a>
             <button class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/business">Our Business</a></li>
                 <li><a href="/educore">EduCore MIS</a></li>
                 <li><a href="/insights">Insights</a></li>
                 <li><a href="/news">News & Press</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="slideshow">
-            <div class="slide active" style="background-image: url('images/hero-1.jpg')"></div>
-            <div class="slide" style="background-image: url('images/hero-2.jpg')"></div>
-            <div class="slide" style="background-image: url('images/hero-3.jpg')"></div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 id="slide-title">The Quality of a Business<br>Mirrors the Quality of Its Systems</h1>
-            <p id="slide-subtitle">Technology shapes performance.</p>
-            <a href="/business" class="cta-button" id="slide-btn">Explore Services</a>
-        </div>
-        <div class="slide-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-        </div>
-        <div class="hero-spinner" id="heroSpinner"></div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
+    <section class="page-header header-contact">
         <div class="container">
-            <h2 class="animate">About Kizazi Technologies</h2>
-            <p class="animate animate-delay-1">We are a leading technology company committed to delivering cutting-edge solutions that drive digital transformation. Our team of experts brings years of experience across various industries, empowering businesses to achieve their goals through innovative technology.</p>
-            <a href="/about" class="cta-button animate animate-delay-2">Meet Our Team</a>
+            <h1 class="animate">Contact Us</h1>
+            <p class="animate animate-delay-1">Let's talk about what you need</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-<section class="services-home">
-    <div class="container">
-
-        <div class="services-home-header">
-            <h2>What we do.</h2>
-            <a href="/business">See full details →</a>
-        </div>
-
-        <div class="services-home-grid">
-
-            <div class="service-home-card animate">
-                <div class="service-home-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="service-home-text">
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built to work — for the people who use them and the businesses that depend on them.</p>
-                </div>
-            </div>
-
-            <div class="service-home-card animate animate-delay-1">
-                <div class="service-home-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="service-home-text">
-                    <h3>Mobile App Development</h3>
-                    <p>iOS and Android apps that people actually use. Built around real behaviour, not assumptions about it.</p>
-                </div>
-            </div>
-
-            <div class="service-home-card animate animate-delay-2">
-                <div class="service-home-icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-                <div class="service-home-text">
-                    <h3>Cloud Solutions</h3>
-                    <p>Infrastructure that scales with your business. Reliable, secure and built to keep running when it matters most.</p>
-                </div>
-            </div>
-
-            <div class="service-home-card animate animate-delay-3">
-                <div class="service-home-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <div class="service-home-text">
-                    <h3>Data Analytics</h3>
-                    <p>Turn your data into decisions that move things forward. Stop guessing what is happening in your business.</p>
-                </div>
-            </div>
-
-            <div class="service-home-card animate">
-                <div class="service-home-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="service-home-text">
-                    <h3>System Automation</h3>
-                    <p>Take the repetitive work off your team's plate. Build it once, run it forever. Free your people for the work that actually needs them.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-    <!-- EduCore Teaser -->
-    <section class="educore-teaser">
+    <section class="contact">
         <div class="container">
-            <div class="educore-teaser-inner">
-
-                <div class="educore-teaser-left animate">
-                    <span class="educore-teaser-label">EduCore MIS</span>
-                    <h2 class="educore-teaser-question">
-                        A school's reputation is built<br>on what people see. <em>But what<br>shows how well it is actually<br>being run?</em>
-                    </h2>
+            <div class="contact-layout">
+                <div class="contact-details">
+                    <h2 class="animate">Get in Touch</h2>
+                    <p class="animate animate-delay-1">Whether you have a project in mind, a question about EduCore MIS, or just want to understand how we can help — we are happy to talk.</p>
+                    <div class="contact-info-grid animate animate-delay-2">
+                        <div class="info-card">
+                            <h3>Location</h3>
+                            <p>Blantyre, Malawi</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Email</h3>
+                            <p>info@kizazitechnologies.com</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Phone & WhatsApp</h3>
+                            <p>+265 993 909 120</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>EduCore MIS</h3>
+                            <p>Talk to us on WhatsApp for school system enquiries</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="educore-teaser-right animate animate-delay-2">
-                    <p class="educore-teaser-sub">EduCore MIS. Built for the work behind the reputation.</p>
-                    <a href="/educore" class="educore-teaser-link">
-                        See how it works <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="contact-form-wrap animate animate-delay-1">
+                    <h2>Send a Message</h2>
+                    <form class="contact-form" action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Stats + Profile + Clients Section -->
-    <section class="impact-section">
-        <div class="container">
-
-            <div class="stats-row">
-                <div class="stat-item animate animate-delay-1">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item animate animate-delay-2">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-item animate animate-delay-3">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item animate animate-delay-4">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support</div>
-                </div>
-            </div>
-
-            <div class="profile-strip animate">
-                <div class="profile-text">
-                    <span class="profile-label">Company Profile</span>
-                    <p>Download our full company profile to learn more about Kizazi Technologies — our services, case studies and approach.</p>
-                </div>
-                <a href="kizazi-profile.pdf" download class="profile-download">
-                    <i class="fas fa-download"></i> Download Profile
-                </a>
-            </div>
-
-            <div class="clients-section">
-                <p class="clients-label animate">Trusted By</p>
-                <div class="clients-grid animate animate-delay-1">
-                    <div class="client-logo"><img src="../images/logo-maiic.png" alt="MAIIC"></div>
-                    <div class="client-logo"><img src="../images/logo-agriculture.jpg" alt="Ministry of Agriculture"></div>
-                    <div class="client-logo"><img src="../images/logo-bethechange.png" alt="Be the Change"></div>
-                    <div class="client-logo"><img src="../images/logo-sadc.png" alt="SADC"></div>
-                    <div class="client-logo"><img src="../images/logo-unima.png" alt="University of Malawi"></div>
-                    <div class="client-logo"><img src="../images/logo-realist.png" alt="Realist"></div>
-                    <div class="client-logo"><img src="../images/logo-lyno.jpg" alt="Lyno"></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <img src="../images/kizazi-logo.svg" alt="Kizazi Technologies">
@@ -341,7 +102,6 @@
                         <a href="https://www.instagram.com/kizazitech" class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">Services</div>
                     <ul class="footer-links">
@@ -351,7 +111,6 @@
                         <li><a href="/business">Data Analytics</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">Company</div>
                     <ul class="footer-links">
@@ -361,7 +120,6 @@
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">EduCore MIS</div>
                     <ul class="footer-links">
@@ -371,7 +129,6 @@
                         <li><a href="https://wa.me/265889445889" target="_blank">Talk to Us</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">Resources</div>
                     <ul class="footer-links">
@@ -380,9 +137,7 @@
                         <li><a href="/insights">Partners & Clients</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Kizazi Technologies</p>
                 <div class="footer-legal">
@@ -398,73 +153,17 @@
     </a>
 
     <script>
-        window.addEventListener('load', () => {
-            document.getElementById('heroSpinner').classList.add('hidden');
-        });
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-
-        const slideContent = [
-            {
-                title: "The Quality of a Business<br>Mirrors the Quality of Its Systems",
-                subtitle: "Technology shapes performance.",
-                btn: "Explore Services",
-                link: "business.html",
-                btnDark: false
-            },
-            {
-                title: "Growth Is Easier When<br>Systems Are Intentional",
-                subtitle: "We build technology that works quietly and delivers loudly.",
-                btn: "See Our Work",
-                link: "insights.html",
-                btnDark: false
-            },
-            {
-                title: "Good Systems Do Not<br>Announce Themselves — They Perform",
-                subtitle: "Every Scalable Business Is Built on Invisible Systems.",
-                btn: "Get In Touch",
-                link: "contact.html",
-                btnDark: true
-            }
-        ];
-
-        function goToSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
-            currentSlide = n;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-            const content = slideContent[currentSlide];
-            document.getElementById('slide-title').innerHTML = content.title;
-            document.getElementById('slide-subtitle').textContent = content.subtitle;
-            const btn = document.getElementById('slide-btn');
-            btn.textContent = content.btn;
-            btn.href = content.link;
-            btn.style.background = content.btnDark ? 'var(--color-accent)' : 'var(--color-light)';
-            btn.style.color = content.btnDark ? 'var(--color-light)' : 'var(--color-dark)';
-        }
-
-        function nextSlide() {
-            goToSlide((currentSlide + 1) % slides.length);
-        }
-
-        setInterval(nextSlide, 7000);
-
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             const btn = document.querySelector('.hamburger');
             nav.classList.toggle('open');
             btn.classList.toggle('open');
         }
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.animate').forEach(el => observer.observe(el));
     </script>
 

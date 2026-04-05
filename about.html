@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — Kizazi Technologies</title>
-    <meta name="description" content="Meet the team behind Kizazi Technologies. Passionate experts driving digital transformation across Africa.">
+    <meta name="description" content="Learn about Kizazi Technologies — our team, mission, vision and values driving digital transformation across Africa.">
     <meta name="author" content="Kizazi Technologies">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
+        @media (max-width: 768px) {
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-    <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
-</a>
+                <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+            </a>
             <button class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="business.html">Our Business</a></li>
+                <li><a href="educore.html">EduCore MIS</a></li>
                 <li><a href="insights.html">Insights</a></li>
                 <li><a href="news.html">News & Press</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -33,173 +38,94 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header header-about">
         <div class="container">
             <h1 class="animate">About Us</h1>
-            <p class="animate animate-delay-1">The people behind Kizazi Technologies</p>
+            <p class="animate animate-delay-1">Who we are and what drives us</p>
         </div>
     </section>
 
-    <!-- Company Story -->
     <section class="about">
         <div class="container">
-            <h2 class="animate">Our Story</h2>
-            <p class="animate animate-delay-1">We are a leading technology company committed to delivering cutting-edge solutions that drive digital transformation. Our team of experts brings years of experience across various industries, empowering businesses to achieve their goals through innovative technology.</p>
-            <p class="animate animate-delay-2">Founded with a vision to bridge the technology gap in Africa, Kizazi Technologies has grown into a trusted partner for businesses across the continent and beyond.</p>
+            <h2 class="animate">Kizazi Technologies</h2>
+            <p class="animate animate-delay-1">We are a technology company based in Blantyre, Malawi, committed to building digital solutions that solve real problems for businesses and institutions across Africa. We believe that good technology should be simple, reliable and built with the people who use it in mind.</p>
+            <p class="animate animate-delay-2">From custom web and mobile applications to full management systems, we work closely with our clients to understand their challenges and build solutions that actually work in their context.</p>
         </div>
     </section>
 
-
-    <!-- Purpose Vision Mission Values -->
-<section class="pvmv-section">
-    <div class="pvmv-bg"></div>
-    <div class="container">
-        <div class="pvmv-grid">
-            <div class="pvmv-card">
-                <h3>Our Purpose</h3>
-                <p>To make growth sustainable by building intentional technology systems that bring clarity, structure, and long-term stability to organizations.</p>
-            </div>
-            <div class="pvmv-card">
-                <h3>Our Mission</h3>
-                <p>To design and implement reliable, scalable digital systems that solve real operational challenges and strengthen institutional performance.</p>
-            </div>
-            <div class="pvmv-card">
-                <h3>Our Vision</h3>
-                <p>To become a trusted African technology partner shaping the digital foundations of the next generation of institutions.</p>
-            </div>
-            <div class="pvmv-card">
-                <h3>Our Values</h3>
-                <p>Intentional Design.<br>Structured Execution.<br>Trusted Performance.</p>
+    <section class="pvmv-section">
+        <div class="container">
+            <div class="pvmv-grid">
+                <div class="pvmv-card animate">
+                    <h3>Our Purpose</h3>
+                    <p>To make technology work for people — not the other way around. We build tools that simplify work, protect information and create room for better decisions.</p>
+                </div>
+                <div class="pvmv-card animate animate-delay-1">
+                    <h3>Our Vision</h3>
+                    <p>A continent where every business, school and institution has access to digital tools that match their scale and context — built locally, built to last.</p>
+                </div>
+                <div class="pvmv-card animate animate-delay-2">
+                    <h3>Our Mission</h3>
+                    <p>To deliver technology solutions that are reliable, affordable and genuinely useful — through honest partnerships and careful, considered work.</p>
+                </div>
+                <div class="pvmv-card animate animate-delay-3">
+                    <h3>Our Values</h3>
+                    <p>Integrity in every engagement. Simplicity in every solution. Accountability to every client. Pride in every line of work we deliver.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-    <!-- Team Section -->
     <section class="team">
         <div class="container">
             <h2 class="animate">Our Team</h2>
             <div class="team-grid">
                 <div class="team-member animate animate-delay-1">
-                    <img src="images/team-member-1.jpg" alt="Yamikani Kapesi">
-                    <h3>Yamikani Kapesi</h3>
-                    <p class="role">CEO & Founder</p>
-                    <p class="bio">Visionary leader with 15+ years in tech innovation | Fintech.</p>
+                    <img src="images/team-member-1.jpg" alt="Team Member">
+                    <h3>Yamikani Francis Kapesi</h3>
+                    <div class="role">Co-Founder & CEO</div>
+                    <p class="bio">Leading strategy, client relationships and product direction at Kizazi Technologies.</p>
                 </div>
                 <div class="team-member animate animate-delay-2">
-                    <img src="images/team-member-2.jpg" alt="Dave Kamanga">
-                    <h3>Dave Kamanga</h3>
-                    <p class="role">CTO</p>
-                    <p class="bio">Expert in cloud architecture and system design.</p>
+                    <img src="images/team-member-2.jpg" alt="Team Member">
+                    <h3>Frank Mwale</h3>
+                    <div class="role">Lead Developer</div>
+                    <p class="bio">Building the systems and solutions that power our clients' operations.</p>
                 </div>
                 <div class="team-member animate animate-delay-3">
-                    <img src="images/team-member-3.jpg" alt="Jane Chibande">
-                    <h3>Jane Chibande</h3>
-                    <p class="role">Lead Developer</p>
-                    <p class="bio">Full-stack developer passionate about clean code.</p>
+                    <img src="images/team-member-3.jpg" alt="Team Member">
+                    <h3>Yollanda Sibande</h3>
+                    <div class="role">Design & UX</div>
+                    <p class="bio">Ensuring every product we build is simple, clear and a pleasure to use.</p>
                 </div>
                 <div class="team-member animate animate-delay-4">
-                    <img src="images/team-member-4.jpg" alt="Prince Raymond Chanika">
+                    <img src="images/team-member-4.jpg" alt="Team Member">
                     <h3>Prince Raymond Chanika</h3>
-                    <p class="role">Product Manager</p>
-                    <p class="bio">Dedicated to delivering user-centric solutions.</p>
+                    <div class="role">Client Success</div>
+                    <p class="bio">Supporting our clients from onboarding through to long-term success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats + Profile + Clients Section -->
-    <section class="impact-section">
-        <div class="container">
-
-            <!-- Stats Row -->
-            <div class="stats-row">
-                <div class="stat-item animate animate-delay-1">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item animate animate-delay-2">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-item animate animate-delay-3">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item animate animate-delay-4">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support</div>
-                </div>
-            </div>
-
-            <!-- Company Profile -->
-            <div class="profile-strip animate">
-                <div class="profile-text">
-                    <span class="profile-label">Company Profile</span>
-                    <p>Download our full company profile to learn more about Kizazi Technologies — our services, case studies and approach.</p>
-                </div>
-                <a href="kizazi-profile.pdf" download class="profile-download">
-                    <i class="fas fa-download"></i> Download Profile
-                </a>
-            </div>
-
-            <!-- Client Logos -->
-            <div class="clients-section">
-                <p class="clients-label animate">Trusted By</p>
-                <div class="clients-grid animate animate-delay-1">
-                    <div class="client-logo">
-                        <img src="images/logo-maiic.png" alt="MAIIC">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-agriculture.jpg" alt="Ministry of Agriculture">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-bethechange.png" alt="Be the Change">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-sadc.png" alt="SADC">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-unima.png" alt="University of Malawi">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-realist.png" alt="Realist">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/logo-lyno.jpg" alt="Lyno">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-
-                <!-- Brand Column -->
                 <div class="footer-brand">
                     <div class="footer-logo">
-    <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
-</div>
+                        <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+                    </div>
                     <div class="footer-contact-info">
                         <p>Blantyre, Malawi</p>
-                        <p>info@kizazi.com</p>
+                        <p>info@kizazitechnologies.com</p>
                         <p>+265 993 909 120</p>
                     </div>
-                     <div class="social-links">
-                    <a href="https://www.linkedin.com/company/kizazi-technologies" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/kizazitechmw" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/kizazitech" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/kizazi-technologies" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/kizazitechmw" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/kizazitech" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                </div>
-
-                <!-- Services Column -->
                 <div class="footer-col">
                     <div class="footer-heading">Services</div>
                     <ul class="footer-links">
@@ -209,8 +135,6 @@
                         <li><a href="business.html">Data Analytics</a></li>
                     </ul>
                 </div>
-
-                <!-- Company Column -->
                 <div class="footer-col">
                     <div class="footer-heading">Company</div>
                     <ul class="footer-links">
@@ -220,8 +144,15 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- Resources Column -->
+                <div class="footer-col">
+                    <div class="footer-heading">EduCore MIS</div>
+                    <ul class="footer-links">
+                        <li><a href="educore.html">About EduCore</a></li>
+                        <li><a href="https://educore-mis-9fcq.vercel.app/login" target="_blank">School Login</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="https://wa.me/265889445889" target="_blank">Talk to Us</a></li>
+                    </ul>
+                </div>
                 <div class="footer-col">
                     <div class="footer-heading">Resources</div>
                     <ul class="footer-links">
@@ -230,10 +161,7 @@
                         <li><a href="insights.html">Partners & Clients</a></li>
                     </ul>
                 </div>
-
             </div>
-
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Kizazi Technologies</p>
                 <div class="footer-legal">
@@ -249,26 +177,18 @@
     </a>
 
     <script>
-        // Hamburger Menu
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             const btn = document.querySelector('.hamburger');
             nav.classList.toggle('open');
             btn.classList.toggle('open');
         }
-
-        // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
-        document.querySelectorAll('.animate').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
     </script>
 
 </body>

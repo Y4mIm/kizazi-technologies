@@ -8,24 +8,124 @@
     <meta name="author" content="Kizazi Technologies">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
+
+        .products-section {
+            padding: var(--space-lg) 0;
+            background: var(--color-bg);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .products-section h2 {
+            font-size: var(--size-h2);
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .product-card {
+            background: var(--color-light);
+            border: 1px solid var(--color-border);
+            padding: 48px 40px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow);
+        }
+
+        .product-card-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .product-card h3 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            color: var(--color-text);
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .product-card p {
+            color: var(--color-muted);
+            font-size: 0.92rem;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        .product-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 4px;
+            transition: var(--transition);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .product-card-link:hover {
+            color: var(--color-accent);
+        }
+
+        .product-card-link i {
+            font-size: 0.75rem;
+            transition: transform 0.2s;
+        }
+
+        .product-card-link:hover i {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
+            .product-card {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 32px 24px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-           <a href="index.html" class="logo">
-    <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
-</a>
+            <a href="index.html" class="logo">
+                <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+            </a>
             <button class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="business.html" class="active">Our Business</a></li>
+                <li><a href="educore.html">EduCore MIS</a></li>
                 <li><a href="insights.html">Insights</a></li>
                 <li><a href="news.html">News & Press</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -33,7 +133,6 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header header-business">
         <div class="container">
             <h1 class="animate">Our Business</h1>
@@ -41,7 +140,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services">
         <div class="container">
             <h2 class="animate">Our Services</h2>
@@ -66,7 +164,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
     <section class="why-us">
         <div class="container">
             <h2 class="animate">Why Choose Kizazi Technologies</h2>
@@ -79,7 +176,7 @@
                 <div class="feature-item animate animate-delay-2">
                     <div class="feature-number">02</div>
                     <h3>Proven Track Record</h3>
-                    <p>Successfully delivered projects for Fortune 500 companies.</p>
+                    <p>Successfully delivered projects across multiple sectors in Malawi and beyond.</p>
                 </div>
                 <div class="feature-item animate animate-delay-3">
                     <div class="feature-number">03</div>
@@ -95,27 +192,55 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="animate">Our Products</h2>
+            <div class="products-grid">
+
+                <!-- EduCore MIS -->
+                <div class="product-card animate">
+                    <div>
+                        <span class="product-card-label">School Management System</span>
+                        <h3>EduCore MIS</h3>
+                        <p>Built for private and mission schools across Malawi. One system that keeps your school's information safe, your staff organised, and your administration running — every single day.</p>
+                    </div>
+                    <a href="educore.html" class="product-card-link">
+                        See EduCore <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Zoko App -->
+                <div class="product-card animate animate-delay-1">
+                    <div>
+                        <span class="product-card-label">Booking & Business Platform</span>
+                        <h3>Zoko App</h3>
+                        <p>Finding a good beautician shouldn't be word of mouth. Zoko connects clients with skilled beauty professionals — book, pay, and manage your appointments in one place. For beauticians, it's your business in your pocket.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-
                 <div class="footer-brand">
                     <div class="footer-logo">
-    <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
-</div>
+                        <img src="images/kizazi-logo.svg" alt="Kizazi Technologies">
+                    </div>
                     <div class="footer-contact-info">
-                        <p> Blantyre, Malawi</p>
-                        <p> info@kizazi.com</p>
-                        <p> +265 993 909 120</p>
+                        <p>Blantyre, Malawi</p>
+                        <p>info@kizazitechnologies.com</p>
+                        <p>+265 993 909 120</p>
                     </div>
                     <div class="social-links">
-                    <a href="https://www.linkedin.com/company/kizazi-technologies" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/kizazitechmw" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/kizazitech" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/kizazi-technologies" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/kizazitechmw" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/kizazitech" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">Services</div>
                     <ul class="footer-links">
@@ -125,7 +250,6 @@
                         <li><a href="business.html">Data Analytics</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <div class="footer-heading">Company</div>
                     <ul class="footer-links">
@@ -135,7 +259,15 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
+                <div class="footer-col">
+                    <div class="footer-heading">EduCore MIS</div>
+                    <ul class="footer-links">
+                        <li><a href="educore.html">About EduCore</a></li>
+                        <li><a href="https://educore-mis-9fcq.vercel.app/login" target="_blank">School Login</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="https://wa.me/265889445889" target="_blank">Talk to Us</a></li>
+                    </ul>
+                </div>
                 <div class="footer-col">
                     <div class="footer-heading">Resources</div>
                     <ul class="footer-links">
@@ -144,9 +276,7 @@
                         <li><a href="insights.html">Partners & Clients</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Kizazi Technologies</p>
                 <div class="footer-legal">
@@ -162,26 +292,18 @@
     </a>
 
     <script>
-        // Hamburger Menu
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             const btn = document.querySelector('.hamburger');
             nav.classList.toggle('open');
             btn.classList.toggle('open');
         }
-
-        // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
-        document.querySelectorAll('.animate').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
     </script>
 
 </body>

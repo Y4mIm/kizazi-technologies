@@ -115,6 +115,84 @@ body {
     padding: 0 24px;
 }
 
+/* ===== TOP CONTACT BAR ===== */
+.top-bar {
+    background: var(--color-footer-bg);
+    color: rgba(255,255,255,0.85);
+    padding: 9px 0;
+    font-size: 0.8rem;
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.top-bar-contacts {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.top-bar-contacts a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.top-bar-contacts a:hover {
+    color: #93c5fd;
+}
+
+.top-bar-contacts i {
+    color: #93c5fd;
+    font-size: 0.78rem;
+}
+
+.top-bar-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.top-bar-social a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+}
+
+.top-bar-social a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .top-bar-social {
+        display: none;
+    }
+
+    .top-bar-contacts {
+        gap: 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .top-bar-contacts::-webkit-scrollbar {
+        display: none;
+    }
+
+    .top-bar .container {
+        justify-content: flex-start;
+    }
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
     background: rgba(255,255,255,0.92);

@@ -9,126 +9,23 @@
     <meta name="author" content="Kizazi Technologies">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-
-        /* ===== EDUCORE TEASER ===== */
-        .educore-teaser {
-            padding: 80px 0;
-            background: var(--color-light);
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .educore-teaser-inner {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 48px;
-        }
-
-        .educore-teaser-left {
-            max-width: 620px;
-        }
-
-        .educore-teaser-label {
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            display: block;
-            margin-bottom: 24px;
-        }
-
-        .educore-teaser-question {
-            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-            font-weight: 900;
-            color: var(--color-text);
-            letter-spacing: -0.03em;
-            line-height: 1.18;
-            margin-bottom: 0;
-        }
-
-        .educore-teaser-question em {
-            font-style: normal;
-            color: var(--color-accent);
-        }
-
-        .educore-teaser-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 20px;
-            flex-shrink: 0;
-        }
-
-        .educore-teaser-sub {
-            font-size: 0.88rem;
-            color: var(--color-muted);
-            line-height: 1.7;
-            text-align: right;
-            max-width: 260px;
-        }
-
-        .educore-teaser-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.88rem;
-            letter-spacing: 0.02em;
-            border-bottom: 2px solid var(--color-accent);
-            padding-bottom: 4px;
-            transition: var(--transition);
-        }
-
-        .educore-teaser-link:hover {
-            color: var(--color-accent);
-            gap: 14px;
-        }
-
-        .educore-teaser-link i {
-            font-size: 0.75rem;
-            transition: transform 0.2s;
-        }
-
-        .educore-teaser-link:hover i {
-            transform: translateX(4px);
-        }
-
-        /* Footer 5-column */
-        .footer-top {
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-        }
-
-        @media (max-width: 768px) {
-            .educore-teaser-inner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 32px;
-            }
-
-            .educore-teaser-right {
-                align-items: flex-start;
-            }
-
-            .educore-teaser-sub {
-                text-align: left;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column: 1 / -1;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-contacts">
+                <a href="tel:+265993909120"><i class="fas fa-phone"></i> +265 993 909 120</a>
+                <a href="mailto:info@kizazitechnologies.com"><i class="fas fa-envelope"></i> info@kizazitechnologies.com</a>
+            </div>
+            <div class="top-bar-social">
+                <a href="https://www.linkedin.com/company/kizazi-technologies"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/kizazitechmw"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/kizazitech"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
